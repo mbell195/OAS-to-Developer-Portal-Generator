@@ -18,7 +18,7 @@ The flow is as follows:
 
 ---
 
-## 🚀 Installation & First-Time Setup
+## Installation & First-Time Setup
 
 ### 1. Fork/Clone this Repository
 
