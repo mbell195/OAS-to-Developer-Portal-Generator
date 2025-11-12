@@ -1,6 +1,6 @@
 # Automated API Documentation (OAS 3 to GitHub Pages)
 
-[![Build and Deploy API Docs](https://github.com/your-username/your-repo/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/your-username/your-repo/actions/workflows/deploy-docs.yml)
+[[Build and Deploy API Docs]](https://github.com/your-username/your-repo/actions/workflows/deploy-docs.yml)
 
 This project provides a "docs-as-code" pipeline to automatically generate and deploy a beautiful, searchable API documentation website.
 
@@ -18,7 +18,7 @@ The flow is as follows:
 
 ---
 
-## Installation & First-Time Setup
+## 🚀 Installation & First-Time Setup
 
 ### 1. Fork/Clone this Repository
 
