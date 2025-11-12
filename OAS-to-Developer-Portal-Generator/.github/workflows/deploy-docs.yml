@@ -1,0 +1,105 @@
+# .github/workflows/deploy-docs.yml
+
+# The display name of the workflow, as it will appear in the "Actions" tab  
+name: Build and Deploy API Docs
+
+# ---------------------------------------------------------------------  
+# TRIGGERS  
+# ---------------------------------------------------------------------  
+# This section defines when the workflow will run.  
+on:  
+  # 1. Run on any push (commit) to the 'main' branch.  
+  #    This is the primary trigger for automatic updates.  
+  push:  
+    branches:  
+      - main  
+    
+  # 2. Allow running this workflow manually from the Actions tab.  
+  #    This is useful for debugging or forcing a re-deploy.  
+  workflow_dispatch:
+
+# ---------------------------------------------------------------------  
+# PERMISSIONS  
+# ---------------------------------------------------------------------  
+# Defines the permissions granted to the GITHUB_TOKEN for this job.  
+permissions:  
+  contents: read   # Required to check out the repository code.  
+  pages: write     # Required to deploy the built site to GitHub Pages.  
+  id-token: write  # Required to authenticate the deployment.
+
+# ---------------------------------------------------------------------  
+# JOBS  
+# ---------------------------------------------------------------------  
+jobs:  
+  build-and-deploy:  
+    name: Build and Deploy  
+    runs-on: ubuntu-latest  
+      
+    # ---------------------------------------------------------------  
+    # STEPS  
+    # ---------------------------------------------------------------  
+    steps:  
+      # ---  
+      # STEP 1: Get the repository code  
+      # ---  
+      - name: Checkout code  
+        uses: actions/checkout@v4
+
+      # ---  
+      # STEP 2: Set up Node.js environment (for Widdershins)  
+      # ---  
+      - name: Set up Node.js  
+        uses: actions/setup-node@v4  
+        with:  
+          node-version: '20'
+
+      # ---  
+      # STEP 3: Install Widdershins (OAS to Markdown)  
+      # ---  
+      - name: Install Widdershins  
+        run: npm install -g widdershins
+
+      # ---  
+      # STEP 4: Set up Python environment (for MkDocs)  
+      # ---  
+      - name: Set up Python  
+        uses: actions/setup-python@v5  
+        with:  
+          python-version: 3.x
+
+      # ---  
+      # STEP 5: Install MkDocs (Site Generator)  
+      # ---  
+      - name: Install MkDocs and Material Theme  
+        run: pip install mkdocs mkdocs-material
+
+      # ---  
+      # STEP 6: Run Widdershins (Generate Markdown)  
+      # ---  
+      - name: Generate Markdown from OpenAPI  
+        run: widdershins --summary openapi.json -o docs/index.md  
+        # MAINTENANCE: If you rename 'openapi.json', change it here.  
+        # MAINTENANCE: If you change the nav in mkdocs.yml,   
+        #              change the output 'docs/index.md' here.
+
+      # ---  
+      # STEP 7: Run MkDocs (Build Site)  
+      # ---  
+      # This builds the site into a directory named 'site/'  
+      - name: Build MkDocs site  
+        run: mkdocs build
+
+      # ---  
+      # STEP 8: Upload Artifact  
+      # ---  
+      - name: Upload artifact  
+        uses: actions/upload-pages-artifact@v3  
+        with:  
+          path: './site'
+
+      # ---  
+      # STEP 9: Deploy to GitHub Pages  
+      # ---  
+      - name: Deploy to GitHub Pages  
+        id: deployment  
+        uses: actions/deploy-pages@v4

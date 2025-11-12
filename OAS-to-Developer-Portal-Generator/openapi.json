@@ -1,0 +1,21 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "My Sample API",
+    "version": "1.0.0",
+    "description": "A sample API to demonstrate the documentation pipeline."
+  },
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Get Users",
+        "description": "Retrieve a list of users.",
+        "responses": {
+          "200": {
+            "description": "A successful response."
+          }
+        }
+      }
+    }
+  }
+}

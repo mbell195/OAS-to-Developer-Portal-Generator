@@ -1,0 +1,39 @@
+site_name: "My API Documentation"
+site_url: "https://your-username.github.io/your-repo-name/"
+repo_url: "https://github.com/your-username/your-repo-name"
+repo_name: "your-repo-name"
+edit_uri: "blob/main/docs/"
+
+theme:
+  name: "material"
+  palette:
+    - scheme: default
+      primary: "blue"
+      accent: "blue"
+    - scheme: slate
+      primary: "blue"
+      accent: "blue"
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.instant
+    - toc.integrate
+    - navigation.top
+    - content.code.copy
+    - content.code.annotation
+    - search.suggest
+    - search.highlight
+
+nav:
+  - 'API Reference': 'index.md'
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
