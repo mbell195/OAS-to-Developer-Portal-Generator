@@ -7,7 +7,7 @@ venv/
 *.env
 
 # MkDocs
-site/
+# site/ is tracked to provide a sample of the generated documentation
 
 # Node
 node_modules/
