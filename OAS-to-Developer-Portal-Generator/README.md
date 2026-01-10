@@ -1,6 +1,6 @@
 # Automated API Documentation (OAS 3 to GitHub Pages)
 
-[[Build and Deploy API Docs]](https://github.com/your-username/your-repo/actions/workflows/deploy-docs.yml)
+![Build and Deploy API Docs](https://github.com/your-username/your-repo/actions/workflows/deploy-docs.yml/badge.svg)
 
 This project provides a "docs-as-code" pipeline to automatically generate and deploy a beautiful, searchable API documentation website.
 
@@ -23,7 +23,7 @@ The flow is as follows:
 ### 1. Fork/Clone this Repository
 
 ```bash
-git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)  
+git clone https://github.com/your-username/your-repo.git
 cd your-repo
 ```
 
@@ -55,7 +55,7 @@ Your first build will trigger. You can watch its progress in your repository's *
 
 ---
 
-## **🛠️ Maintenance & How to Use**
+## 🛠️ Maintenance & How to Use
 
 ### Updating Your API Docs
 
@@ -72,39 +72,52 @@ The GitHub Action will automatically detect the change, rebuild the site, and de
 
 **Steps:**
 
-1. **Install tools:**  
+1. **Install tools:**
 ```bash
-pip install mkdocs mkdocs-material  
+pip install mkdocs mkdocs-material
 npm install -g widdershins
 ```
 
-2. **Run the generation script:**  
+2. **Generate and clean the markdown:**
 ```bash
-widdershins --summary openapi.json -o docs/index.md  
+widdershins --summary openapi.json -o docs/index.md
+```
+
+3. **Strip Slate-specific frontmatter** (required for mkdocs-material compatibility):
+```bash
+sed -i 's/search: true//' docs/index.md
+sed -i '/^language_tabs:/,/^headingLevel:/d' docs/index.md
+```
+> **Note:** On macOS, use `sed -i ''` instead of `sed -i`.
+
+4. **Start the local server:**
+```bash
 mkdocs serve
 ```
 
-3. **Preview your site** at http://127.0.0.1:8000.
+5. **Preview your site** at http://127.0.0.1:8000.
 
-## **📂 Project Structure**
+## 📂 Project Structure
 
-.  
-├── .github/  
-│   └── workflows/  
-│       └── deploy-docs.yml   # The GitHub Action automation  
-├── docs/  
-│   └── index.md              # The generated Markdown (do not edit manually)  
-├── .gitignore                # Ignores local build files  
-├── mkdocs.yml                # Site configuration (colors, nav, features)  
+```
+.
+├── .github/
+│   └── workflows/
+│       └── deploy-docs.yml   # The GitHub Action automation
+├── docs/
+│   └── index.md              # The generated Markdown (do not edit manually)
+├── .gitignore                # Ignores local build files
+├── mkdocs.yml                # Site configuration (colors, nav, features)
 └── openapi.json              # Your API "source of truth"
+```
 
 ---
 
-### 4. Placeholder & Utility Files
+## 📄 Placeholder Files Reference
 
-You'll need these files to make the project work.
+These placeholder files are included in this repository to get you started.
 
-**`openapi.json`** (A simple placeholder to get you started)  
+**`openapi.json`** - A sample OpenAPI spec:
 ```json
 {
   "openapi": "3.0.0",
@@ -129,23 +142,25 @@ You'll need these files to make the project work.
 }
 ```
 
-**docs/index.md** (A placeholder for the very first run)
-
+**`docs/index.md`** - Placeholder until first build:
+```markdown
 # API Reference
 
 This documentation is automatically generated. Please wait for the first build to complete.
+```
 
-**.gitignore** (To keep your repository clean)
-
-# Python  
-__pycache__/  
-*.pyc  
-venv/  
+**`.gitignore`** - Keeps your repository clean:
+```gitignore
+# Python
+__pycache__/
+*.pyc
+venv/
 *.env
 
-# MkDocs  
+# MkDocs
 site/
 
-# Node  
-node_modules/  
+# Node
+node_modules/
 npm-debug.log
+```
