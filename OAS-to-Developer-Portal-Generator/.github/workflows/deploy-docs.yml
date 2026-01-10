@@ -73,13 +73,18 @@ jobs:
       - name: Install MkDocs and Material Theme  
         run: pip install mkdocs mkdocs-material
 
-      # ---  
-      # STEP 6: Run Widdershins (Generate Markdown)  
-      # ---  
-      - name: Generate Markdown from OpenAPI  
-        run: widdershins --summary openapi.json -o docs/index.md  
-        # MAINTENANCE: If you rename 'openapi.json', change it here.  
-        # MAINTENANCE: If you change the nav in mkdocs.yml,   
+      # ---
+      # STEP 6: Run Widdershins (Generate Markdown)
+      # ---
+      - name: Generate Markdown from OpenAPI
+        run: |
+          widdershins --summary openapi.json -o docs/index.md
+          # Remove Slate-specific frontmatter that breaks mkdocs-material
+          # Keeps only the title in the YAML frontmatter
+          sed -i 's/search: true//' docs/index.md
+          sed -i '/^language_tabs:/,/^headingLevel:/d' docs/index.md
+        # MAINTENANCE: If you rename 'openapi.json', change it here.
+        # MAINTENANCE: If you change the nav in mkdocs.yml,
         #              change the output 'docs/index.md' here.
 
       # ---  
