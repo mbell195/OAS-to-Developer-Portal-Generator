@@ -2,6 +2,8 @@
 
 ![Build and Deploy API Docs](https://github.com/mbell195/OAS-to-Developer-Portal-Generator/actions/workflows/deploy-docs.yml/badge.svg)
 
+**[View Live Demo](https://mbell195.github.io/OAS-to-Developer-Portal-Generator/)**
+
 This project provides a "docs-as-code" pipeline to automatically generate and deploy a beautiful, searchable API documentation website.
 
 It uses a GitHub Action to monitor your OpenAPI 3 specification. When the spec changes, the action automatically:  
