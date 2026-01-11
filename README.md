@@ -20,6 +20,29 @@ The flow is as follows:
 
 ---
 
+## 🤔 Context
+
+**Why did I build this?**
+
+API documentation is often an afterthought. Teams either maintain docs manually (which quickly become outdated) or rely on expensive hosted solutions. I wanted a simple, free, and automated approach that treats documentation like code.
+
+**The problem:**
+- Manual documentation drifts out of sync with the actual API
+- Swagger UI is functional but lacks polish and customization
+- Hosted documentation platforms add cost and vendor lock-in
+- Setting up a docs pipeline from scratch takes time
+
+**This solution:**
+- **Single source of truth** — Your OpenAPI spec drives everything
+- **Zero manual updates** — Push your spec, docs update automatically
+- **Free hosting** — GitHub Pages costs nothing for public repos
+- **Beautiful output** — MkDocs Material provides a modern, searchable interface
+- **Fully customizable** — Own your pipeline, tweak the theme, add pages
+
+If you maintain an API and want professional documentation without the overhead, fork this repo and you're done in minutes.
+
+---
+
 ## 🚀 Installation & First-Time Setup
 
 ### 1. Fork/Clone this Repository
