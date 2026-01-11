@@ -1,7 +1,7 @@
 site_name: "My API Documentation"
-site_url: "https://your-username.github.io/your-repo-name/"
-repo_url: "https://github.com/your-username/your-repo-name"
-repo_name: "your-repo-name"
+site_url: "https://mbell195.github.io/OAS-to-Developer-Portal-Generator/"
+repo_url: "https://github.com/mbell195/OAS-to-Developer-Portal-Generator"
+repo_name: "OAS-to-Developer-Portal-Generator"
 edit_uri: "blob/main/docs/"
 
 theme:
