@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#get-users" class="md-skip">
+        <a href="#list-users" class="md-skip">
           Skip to content
         </a>
       
@@ -340,13 +340,186 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-users" class="md-nav__link">
+  <a href="#list-users" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Get Users
+        List Users
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="List Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumerated-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerated Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create User
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get User
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update User
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete User
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schemas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumerated-values_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerated Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumerated-values_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerated Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumerated-values_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerated Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -386,21 +559,34 @@
 <p>Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.</p>
 </blockquote>
 <p>A sample API to demonstrate the documentation pipeline.</p>
-<h1 id="my-sample-api-default">Default</h1>
+<p>Base URLs:</p>
+<ul>
+<li><a href="https://api.example.com/v1">https://api.example.com/v1</a></li>
+</ul>
+<h1 id="my-sample-api-users">Users</h1>
 
-<h2 id="get-users">Get Users</h2>
+<h2 id="list-users">List Users</h2>
+<p><a id="opIdlistUsers"></a></p>
 <blockquote>
 <p>Code samples</p>
 </blockquote>
 <div class="highlight"><span class="filename">Shell</span><pre><span></span><code><span class="c1"># You can also use wget</span>
-curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>/users
+curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>https://api.example.com/v1/users<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Accept: application/json&#39;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">HTTP</span><pre><span></span><code><span class="nf">GET</span> <span class="nn">/users</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="highlight"><span class="filename">HTTP</span><pre><span></span><code><span class="nf">GET</span> <span class="nn">https://api.example.com/v1/users</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">,</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="o">:</span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">};</span>
 
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users&#39;</span><span class="p">,</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="nx">headers</span>
 <span class="p">})</span>
 <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
@@ -411,15 +597,22 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <div class="highlight"><span class="filename">Ruby</span><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;rest-client&#39;</span>
 <span class="nb">require</span><span class="w"> </span><span class="s1">&#39;json&#39;</span>
 
-<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">RestClient</span><span class="o">.</span><span class="n">get</span><span class="w"> </span><span class="s1">&#39;/users&#39;</span><span class="p">,</span>
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">RestClient</span><span class="o">.</span><span class="n">get</span><span class="w"> </span><span class="s1">&#39;https://api.example.com/v1/users&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="ss">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="ss">headers</span><span class="p">:</span><span class="w"> </span><span class="n">headers</span>
 
 <span class="nb">p</span><span class="w"> </span><span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users&#39;</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
 </code></pre></div>
@@ -427,13 +620,17 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 
 <span class="k">require</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
 
+<span class="nv">$headers</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;Accept&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+
 <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
 
 <span class="c1">// Define array of request body.</span>
 <span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
 
 <span class="k">try</span> <span class="p">{</span>
-    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="s1">&#39;/users&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="s1">&#39;https://api.example.com/v1/users&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
         <span class="s1">&#39;headers&#39;</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
         <span class="s1">&#39;json&#39;</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
        <span class="p">)</span>
@@ -447,7 +644,7 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 
  <span class="c1">// ...</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">URL</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;/users&quot;</span><span class="p">);</span>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">URL</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://api.example.com/v1/users&quot;</span><span class="p">);</span>
 <span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">openConnection</span><span class="p">();</span>
 <span class="n">con</span><span class="p">.</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">);</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">();</span>
@@ -470,8 +667,12 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 
 <span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
+<span class="w">    </span><span class="nx">headers</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;Accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">}</span>
+
 <span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="nx">jsonReq</span><span class="p">})</span>
-<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/users&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://api.example.com/v1/users&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
 <span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">headers</span>
 
 <span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
@@ -480,8 +681,55 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <span class="p">}</span>
 </code></pre></div>
 <p><code>GET /users</code></p>
-<p>Retrieve a list of users.</p>
-<h3 id="get-users-responses">Responses</h3>
+<p>Retrieve a paginated list of all users.</p>
+<h3 id="list-users-parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>limit</td>
+<td>query</td>
+<td>integer</td>
+<td>false</td>
+<td>Maximum number of users to return</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>query</td>
+<td>integer</td>
+<td>false</td>
+<td>Number of users to skip for pagination</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+<p>200 Response</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15T09:30:00Z&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-20T14:45:00Z&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="list-users-responses">Responses</h3>
 
 <table>
 <thead>
@@ -496,14 +744,1272 @@ curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span
 <tr>
 <td>200</td>
 <td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
-<td>A successful response.</td>
-<td>None</td>
+<td>A list of users</td>
+<td>Inline</td>
+</tr>
+<tr>
+<td>401</td>
+<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
+<td>Authentication required</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>500</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
+<td>Internal server error</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-users-responseschema">Response Schema</h3>
+
+<p>Status Code <strong>200</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>» data</td>
+<td>[<a href="#schemauser">User</a>]</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>»» id</td>
+<td>string(uuid)</td>
+<td>true</td>
+<td>none</td>
+<td>Unique identifier for the user</td>
+</tr>
+<tr>
+<td>»» email</td>
+<td>string(email)</td>
+<td>true</td>
+<td>none</td>
+<td>User's email address</td>
+</tr>
+<tr>
+<td>»» name</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>User's full name</td>
+</tr>
+<tr>
+<td>»» role</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>User's role in the system</td>
+</tr>
+<tr>
+<td>»» createdAt</td>
+<td>string(date-time)</td>
+<td>true</td>
+<td>none</td>
+<td>Timestamp when the user was created</td>
+</tr>
+<tr>
+<td>»» updatedAt</td>
+<td>string(date-time)</td>
+<td>true</td>
+<td>none</td>
+<td>Timestamp when the user was last updated</td>
+</tr>
+<tr>
+<td>» total</td>
+<td>integer</td>
+<td>false</td>
+<td>none</td>
+<td>Total number of users</td>
+</tr>
+</tbody>
+</table>
+<h4 id="enumerated-values">Enumerated Values</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>role</td>
+<td>user</td>
+</tr>
+<tr>
+<td>role</td>
+<td>guest</td>
 </tr>
 </tbody>
 </table>
 <aside class="success">
 This operation does not require authentication
 </aside>
+
+<h2 id="create-user">Create User</h2>
+<p><a id="opIdcreateUser"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<div class="highlight"><span class="filename">Shell</span><pre><span></span><code><span class="c1"># You can also use wget</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://api.example.com/v1/users<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Accept: application/json&#39;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">HTTP</span><pre><span></span><code><span class="nf">POST</span> <span class="nn">https://api.example.com/v1/users</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">inputBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">  &quot;email&quot;: &quot;john.doe@example.com&quot;,</span>
+<span class="s1">  &quot;name&quot;: &quot;John Doe&quot;,</span>
+<span class="s1">  &quot;password&quot;: &quot;securePassword123&quot;,</span>
+<span class="s1">  &quot;role&quot;: &quot;user&quot;</span>
+<span class="s1">}&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="o">:</span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users&#39;</span><span class="p">,</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nx">inputBody</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="nx">headers</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Ruby</span><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;rest-client&#39;</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">&#39;json&#39;</span>
+
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Content-Type&#39;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">RestClient</span><span class="o">.</span><span class="n">post</span><span class="w"> </span><span class="s1">&#39;https://api.example.com/v1/users&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="ss">headers</span><span class="p">:</span><span class="w"> </span><span class="n">headers</span>
+
+<span class="nb">p</span><span class="w"> </span><span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users&#39;</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">require</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+
+<span class="nv">$headers</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;Content-Type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Accept&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
+
+<span class="c1">// Define array of request body.</span>
+<span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="s1">&#39;https://api.example.com/v1/users&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;headers&#39;</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
+        <span class="s1">&#39;json&#39;</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
+       <span class="p">)</span>
+    <span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getContents</span><span class="p">());</span>
+ <span class="p">}</span>
+ <span class="k">catch</span> <span class="p">(</span><span class="nx">\GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle exception or api errors.</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+ <span class="p">}</span>
+
+ <span class="c1">// ...</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">URL</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://api.example.com/v1/users&quot;</span><span class="p">);</span>
+<span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">openConnection</span><span class="p">();</span>
+<span class="n">con</span><span class="p">.</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s">&quot;POST&quot;</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">();</span>
+<span class="n">BufferedReader</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">()));</span>
+<span class="n">String</span><span class="w"> </span><span class="n">inputLine</span><span class="p">;</span>
+<span class="n">StringBuffer</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">();</span>
+<span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">inputLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">inputLine</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">in</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Go</span><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">       </span><span class="s">&quot;bytes&quot;</span>
+<span class="w">       </span><span class="s">&quot;net/http&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nx">headers</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;Content-Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;Accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="nx">jsonReq</span><span class="p">})</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;POST&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://api.example.com/v1/users&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">headers</span>
+
+<span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>POST /users</code></p>
+<p>Create a new user account.</p>
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;securePassword123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="create-user-parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemausercreate">UserCreate</a></td>
+<td>true</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+<p>201 Response</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15T09:30:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-20T14:45:00Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="create-user-responses">Responses</h3>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>201</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.2">Created</a></td>
+<td>User created successfully</td>
+<td><a href="#schemauser">User</a></td>
+</tr>
+<tr>
+<td>400</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td>
+<td>Invalid request body or parameters</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>401</td>
+<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
+<td>Authentication required</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>409</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.8">Conflict</a></td>
+<td>User with this email already exists</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>500</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
+<td>Internal server error</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+<h2 id="get-user">Get User</h2>
+<p><a id="opIdgetUser"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<div class="highlight"><span class="filename">Shell</span><pre><span></span><code><span class="c1"># You can also use wget</span>
+curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>https://api.example.com/v1/users/<span class="o">{</span>id<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Accept: application/json&#39;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">HTTP</span><pre><span></span><code><span class="nf">GET</span> <span class="nn">https://api.example.com/v1/users/{id}</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="o">:</span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="nx">headers</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Ruby</span><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;rest-client&#39;</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">&#39;json&#39;</span>
+
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">RestClient</span><span class="o">.</span><span class="n">get</span><span class="w"> </span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="ss">headers</span><span class="p">:</span><span class="w"> </span><span class="n">headers</span>
+
+<span class="nb">p</span><span class="w"> </span><span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users/</span><span class="si">{id}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">require</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+
+<span class="nv">$headers</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;Accept&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
+
+<span class="c1">// Define array of request body.</span>
+<span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;headers&#39;</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
+        <span class="s1">&#39;json&#39;</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
+       <span class="p">)</span>
+    <span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getContents</span><span class="p">());</span>
+ <span class="p">}</span>
+ <span class="k">catch</span> <span class="p">(</span><span class="nx">\GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle exception or api errors.</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+ <span class="p">}</span>
+
+ <span class="c1">// ...</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">URL</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://api.example.com/v1/users/{id}&quot;</span><span class="p">);</span>
+<span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">openConnection</span><span class="p">();</span>
+<span class="n">con</span><span class="p">.</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">();</span>
+<span class="n">BufferedReader</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">()));</span>
+<span class="n">String</span><span class="w"> </span><span class="n">inputLine</span><span class="p">;</span>
+<span class="n">StringBuffer</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">();</span>
+<span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">inputLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">inputLine</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">in</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Go</span><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">       </span><span class="s">&quot;bytes&quot;</span>
+<span class="w">       </span><span class="s">&quot;net/http&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nx">headers</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;Accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="nx">jsonReq</span><span class="p">})</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://api.example.com/v1/users/{id}&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">headers</span>
+
+<span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>GET /users/{id}</code></p>
+<p>Retrieve a specific user by their ID.</p>
+<h3 id="get-user-parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td>string(uuid)</td>
+<td>true</td>
+<td>Unique identifier of the user</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+<p>200 Response</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15T09:30:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-20T14:45:00Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="get-user-responses">Responses</h3>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>User details</td>
+<td><a href="#schemauser">User</a></td>
+</tr>
+<tr>
+<td>401</td>
+<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
+<td>Authentication required</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>404</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td>
+<td>Resource not found</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>500</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
+<td>Internal server error</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+<h2 id="update-user">Update User</h2>
+<p><a id="opIdupdateUser"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<div class="highlight"><span class="filename">Shell</span><pre><span></span><code><span class="c1"># You can also use wget</span>
+curl<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>https://api.example.com/v1/users/<span class="o">{</span>id<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Accept: application/json&#39;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">HTTP</span><pre><span></span><code><span class="nf">PUT</span> <span class="nn">https://api.example.com/v1/users/{id}</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">inputBody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">  &quot;email&quot;: &quot;john.doe@example.com&quot;,</span>
+<span class="s1">  &quot;name&quot;: &quot;John Doe&quot;,</span>
+<span class="s1">  &quot;role&quot;: &quot;user&quot;</span>
+<span class="s1">}&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="o">:</span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nx">inputBody</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="nx">headers</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Ruby</span><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;rest-client&#39;</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">&#39;json&#39;</span>
+
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Content-Type&#39;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">RestClient</span><span class="o">.</span><span class="n">put</span><span class="w"> </span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="ss">headers</span><span class="p">:</span><span class="w"> </span><span class="n">headers</span>
+
+<span class="nb">p</span><span class="w"> </span><span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users/</span><span class="si">{id}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">require</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+
+<span class="nv">$headers</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;Content-Type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Accept&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
+
+<span class="c1">// Define array of request body.</span>
+<span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">&#39;PUT&#39;</span><span class="p">,</span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;headers&#39;</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
+        <span class="s1">&#39;json&#39;</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
+       <span class="p">)</span>
+    <span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getContents</span><span class="p">());</span>
+ <span class="p">}</span>
+ <span class="k">catch</span> <span class="p">(</span><span class="nx">\GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle exception or api errors.</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+ <span class="p">}</span>
+
+ <span class="c1">// ...</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">URL</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://api.example.com/v1/users/{id}&quot;</span><span class="p">);</span>
+<span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">openConnection</span><span class="p">();</span>
+<span class="n">con</span><span class="p">.</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s">&quot;PUT&quot;</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">();</span>
+<span class="n">BufferedReader</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">()));</span>
+<span class="n">String</span><span class="w"> </span><span class="n">inputLine</span><span class="p">;</span>
+<span class="n">StringBuffer</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">();</span>
+<span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">inputLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">inputLine</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">in</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Go</span><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">       </span><span class="s">&quot;bytes&quot;</span>
+<span class="w">       </span><span class="s">&quot;net/http&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nx">headers</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;Content-Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span>
+<span class="w">        </span><span class="s">&quot;Accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="nx">jsonReq</span><span class="p">})</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;PUT&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://api.example.com/v1/users/{id}&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">headers</span>
+
+<span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>PUT /users/{id}</code></p>
+<p>Update an existing user's information.</p>
+<blockquote>
+<p>Body parameter</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="update-user-parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td>string(uuid)</td>
+<td>true</td>
+<td>Unique identifier of the user</td>
+</tr>
+<tr>
+<td>body</td>
+<td>body</td>
+<td><a href="#schemauserupdate">UserUpdate</a></td>
+<td>true</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+<p>200 Response</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15T09:30:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-20T14:45:00Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="update-user-responses">Responses</h3>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td>
+<td>User updated successfully</td>
+<td><a href="#schemauser">User</a></td>
+</tr>
+<tr>
+<td>400</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td>
+<td>Invalid request body or parameters</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>401</td>
+<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
+<td>Authentication required</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>404</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td>
+<td>Resource not found</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>500</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
+<td>Internal server error</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+<h2 id="delete-user">Delete User</h2>
+<p><a id="opIddeleteUser"></a></p>
+<blockquote>
+<p>Code samples</p>
+</blockquote>
+<div class="highlight"><span class="filename">Shell</span><pre><span></span><code><span class="c1"># You can also use wget</span>
+curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>https://api.example.com/v1/users/<span class="o">{</span>id<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Accept: application/json&#39;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">HTTP</span><pre><span></span><code><span class="nf">DELETE</span> <span class="nn">https://api.example.com/v1/users/{id}</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">api.example.com</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="o">:</span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="nx">headers</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Ruby</span><pre><span></span><code><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;rest-client&#39;</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">&#39;json&#39;</span>
+
+<span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="s1">&#39;Accept&#39;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">RestClient</span><span class="o">.</span><span class="n">delete</span><span class="w"> </span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="ss">params</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="ss">headers</span><span class="p">:</span><span class="w"> </span><span class="n">headers</span>
+
+<span class="nb">p</span><span class="w"> </span><span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span>
+<span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;https://api.example.com/v1/users/</span><span class="si">{id}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">PHP</span><pre><span></span><code><span class="cp">&lt;?php</span>
+
+<span class="k">require</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+
+<span class="nv">$headers</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">&#39;Accept&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+<span class="p">);</span>
+
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\GuzzleHttp\Client</span><span class="p">();</span>
+
+<span class="c1">// Define array of request body.</span>
+<span class="nv">$request_body</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="s1">&#39;DELETE&#39;</span><span class="p">,</span><span class="s1">&#39;https://api.example.com/v1/users/{id}&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;headers&#39;</span> <span class="o">=&gt;</span> <span class="nv">$headers</span><span class="p">,</span>
+        <span class="s1">&#39;json&#39;</span> <span class="o">=&gt;</span> <span class="nv">$request_body</span><span class="p">,</span>
+       <span class="p">)</span>
+    <span class="p">);</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getBody</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getContents</span><span class="p">());</span>
+ <span class="p">}</span>
+ <span class="k">catch</span> <span class="p">(</span><span class="nx">\GuzzleHttp\Exception\BadResponseException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// handle exception or api errors.</span>
+    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+ <span class="p">}</span>
+
+ <span class="c1">// ...</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Java</span><pre><span></span><code><span class="n">URL</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://api.example.com/v1/users/{id}&quot;</span><span class="p">);</span>
+<span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">openConnection</span><span class="p">();</span>
+<span class="n">con</span><span class="p">.</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s">&quot;DELETE&quot;</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">();</span>
+<span class="n">BufferedReader</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span>
+<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">con</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">()));</span>
+<span class="n">String</span><span class="w"> </span><span class="n">inputLine</span><span class="p">;</span>
+<span class="n">StringBuffer</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">();</span>
+<span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">inputLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">response</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">inputLine</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">in</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Go</span><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">       </span><span class="s">&quot;bytes&quot;</span>
+<span class="w">       </span><span class="s">&quot;net/http&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nx">headers</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">string</span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;Accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;application/json&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">NewBuffer</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="nx">jsonReq</span><span class="p">})</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;DELETE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;https://api.example.com/v1/users/{id}&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">headers</span>
+
+<span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>DELETE /users/{id}</code></p>
+<p>Permanently delete a user account.</p>
+<h3 id="delete-user-parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>In</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>path</td>
+<td>string(uuid)</td>
+<td>true</td>
+<td>Unique identifier of the user</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Example responses</p>
+<p>401 Response</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VALIDATION_ERROR&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The request body is invalid.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="delete-user-responses">Responses</h3>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>Description</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>204</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.5">No Content</a></td>
+<td>User deleted successfully</td>
+<td>None</td>
+</tr>
+<tr>
+<td>401</td>
+<td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td>
+<td>Authentication required</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>404</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td>
+<td>Resource not found</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+<tr>
+<td>500</td>
+<td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td>
+<td>Internal server error</td>
+<td><a href="#schemaerror">Error</a></td>
+</tr>
+</tbody>
+</table>
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+<h1 id="schemas">Schemas</h1>
+<h2 id="tocS_User">User</h2>
+<!-- backwards compatibility -->
+<p><a id="schemauser"></a>
+<a id="schema_User"></a>
+<a id="tocSuser"></a>
+<a id="tocsuser"></a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15T09:30:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-20T14:45:00Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string(uuid)</td>
+<td>true</td>
+<td>none</td>
+<td>Unique identifier for the user</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string(email)</td>
+<td>true</td>
+<td>none</td>
+<td>User's email address</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>User's full name</td>
+</tr>
+<tr>
+<td>role</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>User's role in the system</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>string(date-time)</td>
+<td>true</td>
+<td>none</td>
+<td>Timestamp when the user was created</td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td>string(date-time)</td>
+<td>true</td>
+<td>none</td>
+<td>Timestamp when the user was last updated</td>
+</tr>
+</tbody>
+</table>
+<h4 id="enumerated-values_1">Enumerated Values</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>role</td>
+<td>user</td>
+</tr>
+<tr>
+<td>role</td>
+<td>guest</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_UserCreate">UserCreate</h2>
+<!-- backwards compatibility -->
+<p><a id="schemausercreate"></a>
+<a id="schema_UserCreate"></a>
+<a id="tocSusercreate"></a>
+<a id="tocsusercreate"></a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;securePassword123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="properties_1">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>string(email)</td>
+<td>true</td>
+<td>none</td>
+<td>User's email address</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>User's full name</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string(password)</td>
+<td>true</td>
+<td>none</td>
+<td>User's password (minimum 8 characters)</td>
+</tr>
+<tr>
+<td>role</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>User's role in the system</td>
+</tr>
+</tbody>
+</table>
+<h4 id="enumerated-values_2">Enumerated Values</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>role</td>
+<td>user</td>
+</tr>
+<tr>
+<td>role</td>
+<td>guest</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_UserUpdate">UserUpdate</h2>
+<!-- backwards compatibility -->
+<p><a id="schemauserupdate"></a>
+<a id="schema_UserUpdate"></a>
+<a id="tocSuserupdate"></a>
+<a id="tocsuserupdate"></a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="properties_2">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>string(email)</td>
+<td>false</td>
+<td>none</td>
+<td>User's email address</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>User's full name</td>
+</tr>
+<tr>
+<td>role</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>User's role in the system</td>
+</tr>
+</tbody>
+</table>
+<h4 id="enumerated-values_3">Enumerated Values</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>role</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>role</td>
+<td>user</td>
+</tr>
+<tr>
+<td>role</td>
+<td>guest</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tocS_Error">Error</h2>
+<!-- backwards compatibility -->
+<p><a id="schemaerror"></a>
+<a id="schema_Error"></a>
+<a id="tocSerror"></a>
+<a id="tocserror"></a></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VALIDATION_ERROR&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The request body is invalid.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="properties_3">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Restrictions</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>Error code</td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>true</td>
+<td>none</td>
+<td>Human-readable error message</td>
+</tr>
+<tr>
+<td>details</td>
+<td>[object]</td>
+<td>false</td>
+<td>none</td>
+<td>none</td>
+</tr>
+<tr>
+<td>» field</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Field that caused the error</td>
+</tr>
+<tr>
+<td>» message</td>
+<td>string</td>
+<td>false</td>
+<td>none</td>
+<td>Specific error for this field</td>
+</tr>
+</tbody>
+</table>
 
 
 
