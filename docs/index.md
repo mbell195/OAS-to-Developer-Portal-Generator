@@ -17,18 +17,18 @@ A sample API to demonstrate the documentation pipeline.
 
 > Code samples
 
-```shell
+```shell title="Shell"
 # You can also use wget
 curl -X GET /users
 
 ```
 
-```http
+```http title="HTTP"
 GET /users HTTP/1.1
 
 ```
 
-```javascript
+```javascript title="JavaScript"
 
 fetch('/users',
 {
@@ -43,7 +43,7 @@ fetch('/users',
 
 ```
 
-```ruby
+```ruby title="Ruby"
 require 'rest-client'
 require 'json'
 
@@ -55,7 +55,7 @@ p JSON.parse(result)
 
 ```
 
-```python
+```python title="Python"
 import requests
 
 r = requests.get('/users')
@@ -64,7 +64,7 @@ print(r.json())
 
 ```
 
-```php
+```php title="PHP"
 <?php
 
 require 'vendor/autoload.php';
@@ -91,7 +91,7 @@ try {
 
 ```
 
-```java
+```java title="Java"
 URL obj = new URL("/users");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
@@ -108,7 +108,7 @@ System.out.println(response.toString());
 
 ```
 
-```go
+```go title="Go"
 package main
 
 import (

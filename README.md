@@ -85,10 +85,21 @@ npm install -g widdershins
 widdershins --summary openapi.json -o docs/index.md
 ```
 
-3. **Strip Slate-specific frontmatter** (required for mkdocs-material compatibility):
+3. **Clean up and enhance the markdown** (required for mkdocs-material compatibility):
 ```bash
+# Remove Slate-specific frontmatter
 sed -i 's/search: true//' docs/index.md
 sed -i '/^language_tabs:/,/^headingLevel:/d' docs/index.md
+
+# Add language titles to code blocks
+sed -i 's/^```shell$/```shell title="Shell"/' docs/index.md
+sed -i 's/^```http$/```http title="HTTP"/' docs/index.md
+sed -i 's/^```javascript$/```javascript title="JavaScript"/' docs/index.md
+sed -i 's/^```ruby$/```ruby title="Ruby"/' docs/index.md
+sed -i 's/^```python$/```python title="Python"/' docs/index.md
+sed -i 's/^```php$/```php title="PHP"/' docs/index.md
+sed -i 's/^```java$/```java title="Java"/' docs/index.md
+sed -i 's/^```go$/```go title="Go"/' docs/index.md
 ```
 > **Note:** On macOS, use `sed -i ''` instead of `sed -i`.
 

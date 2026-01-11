@@ -83,6 +83,15 @@ jobs:
           # Keeps only the title in the YAML frontmatter
           sed -i 's/search: true//' docs/index.md
           sed -i '/^language_tabs:/,/^headingLevel:/d' docs/index.md
+          # Add language titles to code blocks for better readability
+          sed -i 's/^```shell$/```shell title="Shell"/' docs/index.md
+          sed -i 's/^```http$/```http title="HTTP"/' docs/index.md
+          sed -i 's/^```javascript$/```javascript title="JavaScript"/' docs/index.md
+          sed -i 's/^```ruby$/```ruby title="Ruby"/' docs/index.md
+          sed -i 's/^```python$/```python title="Python"/' docs/index.md
+          sed -i 's/^```php$/```php title="PHP"/' docs/index.md
+          sed -i 's/^```java$/```java title="Java"/' docs/index.md
+          sed -i 's/^```go$/```go title="Go"/' docs/index.md
         # MAINTENANCE: If you rename 'openapi.json', change it here.
         # MAINTENANCE: If you change the nav in mkdocs.yml,
         #              change the output 'docs/index.md' here.
