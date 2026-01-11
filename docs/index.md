@@ -7,7 +7,7 @@ title: My Sample API v1.0.0
 
 <h1 id="my-sample-api">My Sample API v1.0.0</h1>
 
-> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
+> Scroll down for code samples, example requests and responses. 
 
 A sample API to demonstrate the documentation pipeline.
 

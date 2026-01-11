@@ -91,6 +91,9 @@ widdershins --summary openapi.json -o docs/index.md
 sed -i 's/search: true//' docs/index.md
 sed -i '/^language_tabs:/,/^headingLevel:/d' docs/index.md
 
+# Clean up intro text
+sed -i 's/Select a language for code samples from the tabs above or the mobile navigation menu.//' docs/index.md
+
 # Add language titles to code blocks
 sed -i 's/^```shell$/```shell title="Shell"/' docs/index.md
 sed -i 's/^```http$/```http title="HTTP"/' docs/index.md
