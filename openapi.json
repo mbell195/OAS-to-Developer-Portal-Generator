@@ -14,7 +14,7 @@
   "paths": {
     "/users": {
       "get": {
-        "summary": "List Users",
+        "summary": "List all users",
         "description": "Retrieve a paginated list of all users.",
         "operationId": "listUsers",
         "tags": ["Users"],
